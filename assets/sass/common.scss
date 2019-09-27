@@ -1,0 +1,19 @@
+body, p, h1, h2, h3, h4, h5, h6, ul, li, a{
+	margin: 0;
+	padding: 0;
+}
+*{
+	box-sizing: border-box;
+}
+ul, li{
+	list-style: none;
+}
+body{
+	display: flex;
+	font-family: 'Open Sans', sans-serif;
+}
+#main{
+	width: 85%;
+	left: 15%;
+	position: absolute;
+}

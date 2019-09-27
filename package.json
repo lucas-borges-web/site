@@ -1,0 +1,37 @@
+{
+  "name": "lucas_henrique_borges",
+  "author": "",
+  "private": true,
+  "scripts": {
+    "dev": "cross-var $npm_execpath run development",
+    "development": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-var $npm_execpath run development -- --watch",
+    "watch-poll": "cross-var $npm_execpath run watch -- --watch-poll",
+    "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "cross-var $npm_execpath run production",
+    "production": "cross-env NODE_ENV=production webpack --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "tdd": "cross-var $npm_execpath run test -- --watch --notify"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@fortawesome/fontawesome-free": "^5.10.2",
+    "cross-env": "^5.2.0",
+    "cross-var": "^1.1.0",
+    "css-loader": "^2.1.1",
+    "laravel-mix": "^4.0.15",
+    "node-sass": "^4.12.0",
+    "sass": "^1.17.3",
+    "sass-loader": "^7.3.1",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "jquery": "3.3.1",
+    "jquery-mask-plugin": "^1.14.15",
+    "jquery-validation": "^1.19.0"
+  }
+}

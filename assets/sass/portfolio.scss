@@ -1,0 +1,55 @@
+.portfolio{
+	@include flex();
+	min-height: 100vh;
+	background: blue;
+	flex-wrap: wrap;
+	padding: 5px;
+	&__item{
+		float: left;
+		height: 250px;
+		margin: 5px;
+		overflow: hidden;
+		position: relative;
+		min-width: calc(25% - 10px);
+		color: #fff;
+		a{
+			color: #fff;
+		}
+		&:nth-child(5n + 5){
+			width: 50%;
+			height: 500px;
+		}
+		&:hover{
+			.portfolio__image{
+				transform: scale(1.2);
+			}
+			.portfolio__overlay{
+				opacity: 1;
+			}
+		}
+	}
+	&__image{
+		@include dim(100%, 100%);
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-size: cover;
+		transition: all .5s;
+	}
+	&__overlay{
+		@include flex(center);
+		@include dim(100%, 100%);
+		padding: 15px;
+		background: rgba(0, 0, 0, .4);
+		position: absolute;
+		opacity: 0;
+		transition: all .5s;
+		> div{
+			flex: 1;
+		}
+	}
+	&__name{
+		text-align: center;
+		font-weight: bold;
+	}
+}
