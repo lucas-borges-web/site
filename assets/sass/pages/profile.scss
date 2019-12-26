@@ -1,0 +1,43 @@
+.profile {
+  padding: 50px;
+
+  &__body {
+    display: flex;
+  }
+
+  .infos {
+    flex: 1;
+
+    &__list {
+      width: 80%;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      opacity: .7;
+      margin: 20px 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__icon {
+      width: 25px;
+    }
+
+    &__title {
+      width: 35%;
+      font-weight: bold;
+    }
+  }
+
+  .skills {
+    flex: 1;
+  }
+}

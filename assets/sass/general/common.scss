@@ -1,0 +1,85 @@
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+a {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: currentColor;
+	text-decoration: none;
+}
+
+body {
+	background: #f6f6f6;
+	color: #333;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+// CLASSES
+.headDefault {
+	padding-bottom: 50px;
+
+	&:after {
+		@include pseudo();
+		@include dim(3px, 30px);
+		background: #333;
+		margin: 20px auto 0;
+		display: block;
+		position: relative;
+	}
+}
+
+.titleDefault {
+	@include fsize(42px);
+	text-align: center;
+	line-height: 1;
+}
+
+.descriptionDefault {
+	text-align: center;
+	opacity: .7;
+	max-width: 40%;
+	margin: 20px auto 0;
+}
+
+.input-default, .textarea-default{
+	@include fsize(16px);
+	display: block;
+	width: 100%;
+	border-radius: 6px;
+	border: 1px solid rgba(0, 0, 0, .1);
+	padding-left: 15px;
+	padding-right: 15px;
+	&:focus{
+		outline: 0;
+	}
+}
+.input-default {
+	height: 45px;
+	margin-bottom: 25px;
+}
+.textarea-default{
+	height: 150px;
+	padding: 15px;
+}

@@ -1,18 +1,50 @@
-#home{
-	@include flex(center);
-	background: url('assets/img/bgHome.jpg') center;
+.home {
+	@include flex(center, center);
+	background: url('../img/bgHome.jpg') center;
 	background-size: cover;
 	height: 100vh;
 	padding: 0 50px;
-	color: #fff;
 	position: relative;
-	font-size: 52px;
+
+	&__text {
+		text-align: center;
+		&--feacture {
+			@include fsize(30px);
+			line-height: 1;
+			font-weight: bold;
+		}
+
+		&--big {
+			@include fsize(42px);
+			line-height: 1;
+			margin: 20px 0;
+		}
+
+		&--small{
+			@include fsize(14px);
+		}
+	}
+
+	.midias {
+		@include flex(center);
+
+		&__item {
+			margin: 0 5px;
+			color: #000;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+
 	#mouse-scroll {
 		position: absolute;
 		bottom: 0;
 		left: 50%;
 		transform: translateX(-50%);
 		z-index: 2;
+
 		.mouse {
 			@include dim(22px, 37px);
 			@include border-radius(10px);
@@ -22,6 +54,7 @@
 			top: -90px;
 			left: 50%;
 		}
+
 		.mouse-in {
 			@include dim(2px, 7px);
 			position: relative;
@@ -30,6 +63,7 @@
 			background: #fff;
 			animation: animated-mouse 1.2s ease infinite;
 		}
+
 		.down-arrow-1 {
 			@include dim(7px, 8px);
 			@include rotate(45deg);
@@ -42,6 +76,7 @@
 			top: 3px;
 		}
 	}
+
 	@keyframes animated-mouse {
 		0% {
 			opacity: 1;
@@ -53,6 +88,7 @@
 			transform: translateY(6px);
 		}
 	}
+
 	@keyframes mouse-scroll {
 		0% {
 			opacity: 1;

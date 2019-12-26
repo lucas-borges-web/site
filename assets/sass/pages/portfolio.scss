@@ -1,0 +1,76 @@
+.portfolio {
+	padding: 50px 0;
+	&__items {
+		@include flex();
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		float: left;
+		height: 250px;
+		margin: 0;
+		overflow: hidden;
+		position: relative;
+		width: calc(100% / 4);
+		color: #333;
+		display: block;
+
+		&:hover {
+			.portfolio__overlay {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__image {
+		@include dim(100%, 100%);
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-size: cover;
+		background-position: center;
+	}
+
+	&__overlay {
+		width: calc(100% - 20px);
+		height: calc(100% - 20px);
+		padding: 15px;
+		background: rgba(255, 255, 255, .95);
+		position: absolute;
+		opacity: 0;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		transition: all .5s;
+		>div {
+			flex: 1;
+		}
+	}
+
+	&__name {
+		font-weight: bold;
+		color: orange;
+		@include fsize(12px);
+		margin-bottom: 5px;
+	}
+
+	&__tech {
+		@include fsize(14px);
+	}
+
+	&__link{
+		width: 40px;
+		height: 40px;
+		border: 1px solid orange;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		position: absolute;
+		right: 20px;
+		bottom: 20px;
+		cursor: pointer;
+		color: orange;
+		font-weight: bold;
+	}
+}

@@ -1,0 +1,22 @@
+.header{
+	position: absolute;
+	width: 100%;
+	padding: 30px 50px;
+	top: 0;
+	z-index: 2;
+	.menu{
+		@include flex(center, space-between);
+		&__list{
+			@include flex(center);
+		}
+		&__item{
+			margin: 0 10px;
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+		&__link{
+			padding: 5px;
+		}
+	}
+}

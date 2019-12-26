@@ -1,5 +1,13 @@
-@import './mixin';
-@import './common';
-@import './menu';
-@import './home';
-@import './portfolio';
+// GERAL
+@import 'general/mixin';
+@import 'general/common';
+
+// LAYOUT
+@import 'layout/header';
+@import 'layout/footer';
+
+// PÁGINAS
+@import 'pages/home';
+@import 'pages/portfolio';
+@import 'pages/profile';
+@import 'pages/contact';
